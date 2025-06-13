@@ -300,7 +300,7 @@ def spectral(input_polydata, number_of_clusters=200,
         print(f"<{os.path.basename(__file__)}> Eigenvalue range of A: {e_val[0]} {e_val[-1]}")
         A2 = nearPSD(A)
         e_val, e_vec = np.linalg.eigh(A2)
-        print(f"<{os.path.basename(__file__)}> Eigenvalue range of nearest PSD matrix to A: {e_val[0]} e{_val[-1]}")
+        print(f"<{os.path.basename(__file__)}> Eigenvalue range of nearest PSD matrix to A: {e_val[0]} {e_val[-1]}")
         testval = np.max(A-A2)
         if not testval == 0.0:
             print(f"<{os.path.basename(__file__)}> A matrix differs by PSD matrix by maximum of: {testval}")
